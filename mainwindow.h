@@ -2,10 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QtGui/QMainWindow>
-
-namespace Ui {
-    class MainWindow;
-}
+#include "anketa.h"
 
 class MainWindow : public QMainWindow
 {
@@ -26,7 +23,7 @@ public:
     void showExpanded();
 
 private:
-    Ui::MainWindow *ui;
+    anketa *a;
 };
 
 #endif // MAINWINDOW_H

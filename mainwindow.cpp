@@ -1,17 +1,18 @@
 #include "mainwindow.h"
-#include "ui_mainwindow.h"
+
 
 #include <QtCore/QCoreApplication>
 
 MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent), ui(new Ui::MainWindow)
+    : QMainWindow(parent)
 {
-    ui->setupUi(this);
+    a = new anketa(parent);
+    this->setCentralWidget(a);
 }
 
 MainWindow::~MainWindow()
 {
-    delete ui;
+
 }
 
 void MainWindow::setOrientation(ScreenOrientation orientation)
